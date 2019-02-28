@@ -7,7 +7,9 @@ export class ModalsPo extends BaseComponent {
 
 
   modalWindow = 'modal-container';
-  modalBtnSelector = 'modal-container button';
+  directiveModal = '.modal-dialog';
+  serviceModalBtn = 'modal-container button';
+  directiveModalBtn = '.modal-header button';
   modalBackdrop = '.modal-backdrop';
   modalParagraph = `${this.modalWindow} ${'p'}`;
   demoCardBlock = '.card';
@@ -27,8 +29,6 @@ export class ModalsPo extends BaseComponent {
     serviceToolPopup: 'demo-modal-with-popups',
     serviceBackdrop: 'demo-modal-service-disable-backdrop',
     serviceClassChange: 'demo-modal-change-class',
-
-
     serviceOptions: 'demo-modal-service-options',
     directiveStatic: 'demo-modal-static',
     directiveSizes: 'demo-modal-sizes',
@@ -40,7 +40,7 @@ export class ModalsPo extends BaseComponent {
 
   // temporary placed here
   isElementVisible(baseSelector: string, elementToFind: string, elemNumber = 0) {
-    cy.get(`${ baseSelector } ${elementToFind}`).eq(elemNumber).should('be.visible');
+    cy.get(`${baseSelector} ${elementToFind}`).eq(elemNumber).should('be.visible');
   }
 
   isElemTextCorrect(baseSelector: string, itemSel: string, expectedText: string, rowNum = 0) {
@@ -48,14 +48,14 @@ export class ModalsPo extends BaseComponent {
       .should('contain', expectedText);
   }
 
-  isModalVisible(baseSelector: string, visible: boolean) {
-    cy.get(`${baseSelector} ${this.modalWindow}`).find('.modal-content')
+  isModalVisible(modalSelector: string, visible: boolean, elementNumber = 0) {
+    cy.get(`${'body'} ${modalSelector}`).find('.modal-content').eq(elementNumber)
       .should(visible ? 'to.be.visible' : 'not.to.be.visible');
   }
 
-  isModalDisabled(baseSelector: string, visible: boolean) {
-    cy.get(`${baseSelector} ${this.modalWindow}`).find('.modal-content')
-      .should(visible ? 'not.to.be.enabled' : 'to.be.enabled');
+  isModalDisabled(modalSelector: string, disabled: boolean) {
+    cy.get(`${'body'} ${modalSelector}`).find('.modal-content')
+      .should(disabled ? 'not.to.be.enabled' : 'to.be.enabled');
   }
 
   isBackdropEnabled() {
@@ -75,8 +75,8 @@ export class ModalsPo extends BaseComponent {
       .should('contain', btnTitle);
   }
 
-  clickOnModalBtn(btnTitle: string) {
-    cy.get(this.modalBtnSelector).contains(btnTitle).click();
+  clickOnModalBtn(modalSelector: string, btnTitle: string) {
+    cy.get(modalSelector).contains(btnTitle).click();
   }
 
   checkElementsQuantity(elemToCount: string, expectedQuantity: number) {
@@ -93,5 +93,18 @@ export class ModalsPo extends BaseComponent {
       .should('to.have.descendants', this.modalTooltip)
       .find('bs-tooltip-container')
       .should('to.have.class', 'show');
+  }
+
+  isModalWindowWidth(modalSelector: string, expectedWidth: string, elementNumber = 0) {
+    cy.get(`${modalSelector} ${'.modal-content'}`).eq(elementNumber)
+      .should('have.css', 'width', expectedWidth);
+  }
+
+  isModalHasClass(expectedClass: string) {
+    cy.get(this.modalWindow).should('to.have.descendants', expectedClass);
+  }
+
+  isChildElemExist() { // TODO
+    cy.get(`${'body'} ${this.directiveModal}`).eq(3).should('have.class', '.modal-content')
   }
 }

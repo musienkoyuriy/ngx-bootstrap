@@ -42,83 +42,83 @@ export const demoComponentContent: ContentSection[] = [
         html: require('!!raw-loader?lang=markup!./demos/basic/basic.html'),
         outlet: DemoTabsBasicComponent
       },
-      {
-        title: 'Manual selection',
-        anchor: 'tabs-manual-select',
-        component: require('!!raw-loader?lang=typescript!./demos/manual-selection/manual-selection'),
-        html: require('!!raw-loader?lang=markup!./demos/manual-selection/manual-selection.html'),
-        outlet: DemoTabsManualSelectionComponent
-      },
-      {
-        title: 'Disabled tabs',
-        anchor: 'disabled',
-        component: require('!!raw-loader?lang=typescript!./demos/disabled/disabled'),
-        html: require('!!raw-loader?lang=markup!./demos/disabled/disabled.html'),
-        outlet: DemoTabsDisabledComponent
-      },
-      {
-        title: 'Dynamic tabs',
-        anchor: 'tabs-dynamic',
-        component: require('!!raw-loader?lang=typescript!./demos/dynamic/dynamic'),
-        html: require('!!raw-loader?lang=markup!./demos/dynamic/dynamic.html'),
-        outlet: DemoTabsDynamicComponent
-      },
-      {
-        title: 'Pills',
-        anchor: 'tabs-Pills',
-        component: require('!!raw-loader?lang=typescript!./demos/pills/pills'),
-        html: require('!!raw-loader?lang=markup!./demos/pills/pills.html'),
-        outlet: DemoTabsPillsComponent
-      },
-      {
-        title: 'Vertical Pills',
-        anchor: 'tabs-vertical-pills',
-        component: require('!!raw-loader?lang=typescript!./demos/vertical-pills/vertical-pills'),
-        html: require('!!raw-loader?lang=markup!./demos/vertical-pills/vertical-pills.html'),
-        outlet: DemoTabsVerticalPillsComponent
-      },
-      {
-        title: 'Justified',
-        anchor: 'tabs-justified',
-        component: require('!!raw-loader?lang=typescript!./demos/justified/justified'),
-        html: require('!!raw-loader?lang=markup!./demos/justified/justified.html'),
-        description: '<p><i>Bootstrap 4 doesn\'t have justified classes</i></p>',
-        outlet: DemoTabsJustifiedComponent
-      },
-      {
-        title: 'Custom class',
-        anchor: 'tabs-custom-class',
-        component: require('!!raw-loader?lang=typescript!./demos/custom-class/custom-class'),
-        html: require('!!raw-loader?lang=markup!./demos/custom-class/custom-class.html'),
-        outlet: DemoTabsCustomClassComponent
-      },
-      {
-        title: 'Select event',
-        anchor: 'select-event',
-        component: require('!!raw-loader?lang=typescript!./demos/select-event/select-event'),
-        html: require('!!raw-loader?lang=markup!./demos/select-event/select-event.html'),
-        description: '<p>You can subscribe to tab\'s <code>select</code> event</p>',
-        outlet: DemoTabsSelectEventComponent
-      },
-      {
-        title: 'Configuring defaults',
-        anchor: 'tabs-config-defaults',
-        component: require('!!raw-loader?lang=typescript!./demos/config/config'),
-        html: require('!!raw-loader?lang=markup!./demos/config/config.html'),
-        outlet: DemoTabsConfigComponent
-      },
-      {
-        title: 'Custom template',
-        anchor: 'tabs-custom-template',
-        component: require('!!raw-loader?lang=typescript!./demos/custom-template/custom-template'),
-        html: require('!!raw-loader?lang=markup!./demos/custom-template/custom-template.html'),
-        outlet: DemoTabsCustomComponent
-      },
-      {
-        title: 'Accessibility',
-        anchor: 'accessibility',
-        outlet: DemoAccessibilityComponent
-      }
+      // {
+      //   title: 'Manual selection',
+      //   anchor: 'tabs-manual-select',
+      //   component: require('!!raw-loader?lang=typescript!./demos/manual-selection/manual-selection'),
+      //   html: require('!!raw-loader?lang=markup!./demos/manual-selection/manual-selection.html'),
+      //   outlet: DemoTabsManualSelectionComponent
+      // },
+      // {
+      //   title: 'Disabled tabs',
+      //   anchor: 'disabled',
+      //   component: require('!!raw-loader?lang=typescript!./demos/disabled/disabled'),
+      //   html: require('!!raw-loader?lang=markup!./demos/disabled/disabled.html'),
+      //   outlet: DemoTabsDisabledComponent
+      // },
+      // {
+      //   title: 'Dynamic tabs',
+      //   anchor: 'tabs-dynamic',
+      //   component: require('!!raw-loader?lang=typescript!./demos/dynamic/dynamic'),
+      //   html: require('!!raw-loader?lang=markup!./demos/dynamic/dynamic.html'),
+      //   outlet: DemoTabsDynamicComponent
+      // },
+      // {
+      //   title: 'Pills',
+      //   anchor: 'tabs-Pills',
+      //   component: require('!!raw-loader?lang=typescript!./demos/pills/pills'),
+      //   html: require('!!raw-loader?lang=markup!./demos/pills/pills.html'),
+      //   outlet: DemoTabsPillsComponent
+      // },
+      // {
+      //   title: 'Vertical Pills',
+      //   anchor: 'tabs-vertical-pills',
+      //   component: require('!!raw-loader?lang=typescript!./demos/vertical-pills/vertical-pills'),
+      //   html: require('!!raw-loader?lang=markup!./demos/vertical-pills/vertical-pills.html'),
+      //   outlet: DemoTabsVerticalPillsComponent
+      // },
+      // {
+      //   title: 'Justified',
+      //   anchor: 'tabs-justified',
+      //   component: require('!!raw-loader?lang=typescript!./demos/justified/justified'),
+      //   html: require('!!raw-loader?lang=markup!./demos/justified/justified.html'),
+      //   description: '<p><i>Bootstrap 4 doesn\'t have justified classes</i></p>',
+      //   outlet: DemoTabsJustifiedComponent
+      // },
+      // {
+      //   title: 'Custom class',
+      //   anchor: 'tabs-custom-class',
+      //   component: require('!!raw-loader?lang=typescript!./demos/custom-class/custom-class'),
+      //   html: require('!!raw-loader?lang=markup!./demos/custom-class/custom-class.html'),
+      //   outlet: DemoTabsCustomClassComponent
+      // },
+      // {
+      //   title: 'Select event',
+      //   anchor: 'select-event',
+      //   component: require('!!raw-loader?lang=typescript!./demos/select-event/select-event'),
+      //   html: require('!!raw-loader?lang=markup!./demos/select-event/select-event.html'),
+      //   description: '<p>You can subscribe to tab\'s <code>select</code> event</p>',
+      //   outlet: DemoTabsSelectEventComponent
+      // },
+      // {
+      //   title: 'Configuring defaults',
+      //   anchor: 'tabs-config-defaults',
+      //   component: require('!!raw-loader?lang=typescript!./demos/config/config'),
+      //   html: require('!!raw-loader?lang=markup!./demos/config/config.html'),
+      //   outlet: DemoTabsConfigComponent
+      // },
+      // {
+      //   title: 'Custom template',
+      //   anchor: 'tabs-custom-template',
+      //   component: require('!!raw-loader?lang=typescript!./demos/custom-template/custom-template'),
+      //   html: require('!!raw-loader?lang=markup!./demos/custom-template/custom-template.html'),
+      //   outlet: DemoTabsCustomComponent
+      // },
+      // {
+      //   title: 'Accessibility',
+      //   anchor: 'accessibility',
+      //   outlet: DemoAccessibilityComponent
+      // }
     ]
   },
   {
